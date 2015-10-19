@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-
+<!--Início Mail-->
 <main> 
     		<div class="container">
 				<div class="row-fluid">
 					<section id="em-destaque">
-						<!-- class="duas-linhas" -->
-						<h2 class="span2"><span>Em Destaque</span></h2>
+						<!-- Menu Destaques - TOTAL 5 -->
+						<h2 class="span2"><span>Destaques</span></h2>
 						<ul class="span10 n5">    						
 							<li>
 								<a href="index.html" title="">Padrão na cor verde</a>
@@ -314,7 +314,7 @@
 										<div class="carousel slide" id="gallery-carousel">
 									      <div class="carousel-inner">
 									        <div class="item">
-									          <img alt="Foto de paisagem de montanhas" src="images/image.jpg">
+									          <img alt="Foto de paisagem de montanhas" src="<?php bloginfo('template_url'); ?>/images/image.jpg">
 									          
 									          <div class="galleria-info">
 									          	<div class="galleria-info-text">
@@ -328,7 +328,7 @@
 
 									        </div>
 									        <div class="item active">
-									          <img alt="Foto de flor delicada cercada de folhas verdes" src="images/image2.jpg">
+									          <img alt="Foto de flor delicada cercada de folhas verdes" src="<?php bloginfo('template_url'); ?>/images/image2.jpg">
 									          
 									          <div class="galleria-info">
 									          	<div class="galleria-info-text">
@@ -342,7 +342,7 @@
 									          
 									        </div>
 									        <div class="item">
-									          <img alt="Foto de 3 pinguins" src="images/image3.jpg">
+									          <img alt="Foto de 3 pinguins" src="<?php bloginfo('template_url'); ?>/images/image3.jpg">
 									          
 									          <div class="galleria-info">
 									          	<div class="galleria-info-text">
@@ -356,7 +356,7 @@
 									          
 									        </div>
 									        <div class="item">
-									          <img alt="Foto de várias flores" src="images/image4.jpg">
+									          <img alt="Foto de várias flores" src="<?php bloginfo('template_url'); ?>/images/image4.jpg">
 									          
 									          <div class="galleria-info">
 									          	<div class="galleria-info-text">
@@ -393,19 +393,19 @@
 										<h2 class="outstanding-title">Programas</h2>
 									</div>
 									<div class="span4 no-margin">
-										<a href="#" class="img-rounded"><img src="images/8309509b-fd4a-4c6c-be30-e8ce75642bcc.jpeg" alt="imagem decorativa"></a>
+										<a href="#" class="img-rounded"><img src="<?php bloginfo('template_url'); ?>/images/8309509b-fd4a-4c6c-be30-e8ce75642bcc.jpeg" alt="imagem decorativa"></a>
 										<h2><a href="#">Texto 1: Título da manchete em até 55 caracteres com espaço</a></h2>
 										<p>Subtítulo do texto 1. Escrever texto do subtítulo da chamada em até 130 caracteres com espaço</p>
 				    				</div>
 				    				<!-- fim .span4 .no-margin -->
 				    				<div class="span4">
-										<a href="#" class="img-rounded"><img src="images/4ae7baa4-f707-4b34-a01e-9c5fe45f00b9.jpeg" alt="imagem decorativa"></a>
+										<a href="#" class="img-rounded"><img src="<?php bloginfo('template_url'); ?>/images/4ae7baa4-f707-4b34-a01e-9c5fe45f00b9.jpeg" alt="imagem decorativa"></a>
 										<h2><a href="#">Texto 2: Título da manchete em até 55 caracteres com espaço</a></h2>
 			    						<p>Subtítulo do texto 2. Escrever texto do subtítulo da chamada em até 130 caracteres com espaço</p>
 				    				</div>
 				    				<!-- fim .span4 -->
 				    				<div class="span4">
-										<a href="#" class="img-rounded"><img src="images/c11b62ec-4a89-4707-a39e-9413b20cf235.jpeg" alt="imagem decorativa"></a>
+										<a href="#" class="img-rounded"><img src="<?php bloginfo('template_url'); ?>/images/c11b62ec-4a89-4707-a39e-9413b20cf235.jpeg" alt="imagem decorativa"></a>
 										<h2><a href="#">Texto 3: Título da manchete em até 55 caracteres com espaço</a></h2>
 			    						<p>Subtítulo do texto 3. Escrever texto do subtítulo da chamada em até 130 caracteres com espaço</p>
 				    				</div>
@@ -423,5 +423,5 @@
 			</div>
 			<!-- fim .container -->
 		</main>
-
+<!--FIM Mail-->
 <?php get_footer(); ?>

@@ -83,9 +83,9 @@
     <!-- fim .container -->
     <div class="footer-logos">
         <div class="container">
-            <a href="http://www.acessoainformacao.gov.br/" class="logo-acesso pull-left"><img src="images/acesso-a-informacao.png" alt="Acesso a Informação"></a>
+            <a href="http://www.acessoainformacao.gov.br/" class="logo-acesso pull-left"><img src="<?php bloginfo('template_url'); ?>/images/acesso-a-informacao.png" alt="Acesso a Informação"></a>
             <!-- separador para fins de acessibilidade --><span class="hide">&nbsp;</span><!-- fim separador para fins de acessibilidade -->
-            <a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="images/brasil.png" alt="Brasil - Governo Federal"></a>
+            <a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="<?php bloginfo('template_url'); ?>/images/brasil.png" alt="Brasil - Governo Federal"></a>
         </div>				
     </div>
     <div class="footer-ferramenta">

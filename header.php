@@ -5,25 +5,33 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br" dir="ltr"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title>Portal Modelo - interface 1.0</title>
+        <title>
+            <?php
+            bloginfo('name');
+            if (is_home()) {
+                echo '-' . get_bloginfo('description');
+            } else {
+                wp_title('|', true);
+            }
+            ?>
+        </title>
         <!-- <base href="" /> -->
         <meta name="keywords" content="" />
         <meta name="author" content="Joomla Calango - Joomla User Group Oficial" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="" />
         <meta name="generator" content="Joomla! - Open Source Content Management" />
-        <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script><![endif]-->
         <link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type='text/css'/>
-        <link rel="stylesheet" href="css/template-verde.css" type='text/css'/>		
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type='text/css'/>
-        <!--[if lt IE 10]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
-        <!--[if lt IE 9]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-        <!--[if lt IE 8]><link rel="stylesheet" href="css/ie7.css" /><link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
-        <!-- chamada de fontes local --><!-- <link rel="stylesheet" href="css/fontes.css" type='text/css'/>		 -->
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/libs/bootstrap/css/bootstrap.min.css" type='text/css'/>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/template-verde.css" type='text/css'/>		
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/libs/font-awesome/css/font-awesome.min.css" type='text/css'/>
+        <!--[if lt IE 10]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie.css" /><![endif]-->
+        <!--[if lt IE 9]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie8.css" /><![endif]-->
+        <!--[if lt IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7.css" /><link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css" /><![endif]-->
+        <!-- chamada de fontes local --><!-- <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/fontes.css" type='text/css'/>		 -->
         <!-- chamada de fontes externas --><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,800,700' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" href="jplayer/skin/portalpadrao01/jplayer.css" type='text/css'/>	
-        <?php wp_head(); ?>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/libs/jplayer/skin/portalpadrao01/jplayer.css" type='text/css'/>	
     </head>
     <body>
         <a class="hide" id="topo" href="#accessibility">Ir direto para menu de acessibilidade.</a>
@@ -99,10 +107,10 @@
                     <div class="row-fluid">
                         <div id="logo" class="span8">
                             <!-- <div id="logo" class="span8 big"> <div id="logo" class="span8 small"> -->
-                            <a href="index.html" title="Descrição do Portal Padrão">							
-                                <span class="portal-title-1">Denominação do órgão</span>
-                                <h1 class="portal-title corto">Nome principal</h1>
-                                <span class="portal-description">Subordinação</span>
+                            <a href="<?php bloginfo('template_url'); ?>" title="Prefeitura Munícipal de <?php bloginfo('name');?>">							
+                                <span class="portal-title-1">Prefeitura Munícipal de</span>
+                                <h1 class="portal-title corto"><?php bloginfo('name');?></h1>
+                                <span class="portal-description"><?php echo get_bloginfo('description'); ?></span>
                             </a>
                         </div>
                         <!-- fim .span8 -->
@@ -173,5 +181,4 @@
                     <!-- .container -->
                 </div>
                 <!-- fim .sobre -->			
-
             </header>
