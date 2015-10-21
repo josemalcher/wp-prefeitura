@@ -1,4 +1,22 @@
 <?php
+add_action('init', 'zeniwp_init');
+
+function zeniwp_init(){
+    wpprefeituratopo_register_menus();
+    wpprefeituratopo2_register_menus();
+    wpprefeituralateral_register_menus();
+}
+
+function wpprefeituratopo_register_menus(){
+    register_nav_menu('menu-primario','Menu Principal (Topo)');
+}
+function wpprefeituratopo2_register_menus(){
+    register_nav_menu('menu-primario','Menu Principal (Topo)');
+}
+function wpprefeituralateral_register_menus(){
+    register_nav_menu('menu-primario-lateral','Menu Principal (Lateral)');
+}
+
 /*
  * Carrega os arquivos Css e JS 
  * É necessário ANTES Revisar e atualizar os scripts carregados.
@@ -70,3 +88,23 @@ function wpPrefeitura_enqueue_scripts() {
 
 /***********************************************/
 
+/******** IMAGENS ********/
+//corta imagens
+add_image_size('post-thumb', 540, 266, true);
+add_image_size('post-slider', 620, 305, true);
+add_image_size('post-projeto', 220, 137, true);
+add_image_size('post-projeto-big', 300, 168, true);
+add_image_size('post-mini', 300, 168, true);
+add_image_size('post-widget-mini', 54,54, true);
+
+//adiciona imagens destacadas para ser postada
+add_theme_support('post-thumbnails');
+
+//conrtaola quantidade de textos no post
+// se o texto estiver no Resumo, ele parecerá na integra!
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length() {
+	return 50;
+}
+
+add_theme_support('menus');
